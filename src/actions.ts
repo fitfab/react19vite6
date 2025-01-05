@@ -3,7 +3,11 @@
  *
  */
 
-export async function simulateSave(params: unknown) {
+interface Params {
+  text: string;
+}
+
+export async function simulateSave(params: Params) {
   console.log(params.text.length > 0);
   return await new Promise((resolve) => {
     if (params.text.length > 0) {
